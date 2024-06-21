@@ -10,10 +10,10 @@ from threading import Timer
 import pytz
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7072312985:AAHgR5Lc87DxZANKH2cIeXCgd1PuSInMYD0')
+bot = telebot.TeleBot('7297758734:AAEAHixFYsJ3n9U2Q3Nd8MIVl_X-AW5jHqU')
 
 # Admin user IDs
-admin_id = ["6768273586", "86359536"]
+admin_id = ["2136214036"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -137,12 +137,12 @@ def show_all_users(message):
         except FileNotFoundError:
             response = "No data found"
     else:
-        response = "Only @MrinMoYxCB Can Run This Command."
+        response = "Only @Vaibhav_dhami Can Run This Command."
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['owner'])
 def show_owner(message):
-    response = "👑 Bot Owner: @wonderboy_cd"  # Replace with the actual owner username
+    response = "👑 Bot Owner: @Vaibhav_dhami"  # Replace with the actual owner username
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['add'])
@@ -186,7 +186,7 @@ def add_user(message):
                     user_access[user_to_add] = {"expiry_time": expiry_timestamp}
                     # Save user access data
                     save_user_access(user_access)
-                    response = f"User {user_to_add} approved for {time_value} {time_unit} by @EaruingamGogoi.\n\n\n 🅑🅞🅣 🅛🅘🅝🅚: @ddosv1_bot"
+                    response = f"User {user_to_add} approved for {time_value} {time_unit} by @Vaibhav_dhami.\n\n\n 🅑🅞🅣 🅛🅘🅝🅚: @Bgmi_ddos_v1_bot"
                 else:
                     response = "User already exists."
             except ValueError:
@@ -194,7 +194,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID followed by a positive integer with minute(s), hour(s), day(s), or month(s). \n\nExample Usage: /add 9999999999 3 hours('minutes', 'hours', 'days', or 'months')"
     else:
-        response = "Only @MrinMoYxCB can run this command."
+        response = "Only @Vaibhav_dhami can run this command."
 
     bot.reply_to(message, response)
 
@@ -213,7 +213,7 @@ def show_recent_logs(message):
             response = "No data found "
             bot.reply_to(message, response)
     else:
-        response = "Only @MrinMoYxCB can run this command."
+        response = "Only @Vaibhav_dhami can run this command."
         bot.reply_to(message, response)
 
 @bot.message_handler(commands=['remove'])
@@ -238,7 +238,7 @@ def remove_user(message):
         else:
             response = "Please specify a user ID to remove."
     else:
-        response = "Only @MrinMoYxCB can run this command."
+        response = "Only @Vaibhav_dhami can run this command."
 
     bot.reply_to(message, response)
 
