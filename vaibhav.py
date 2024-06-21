@@ -314,9 +314,9 @@ def handle_bgmi(message):
     else:
         response = ("🚫 Unauthorized Access! 🚫\n\n"
                     "Oops! it seems like you don't have permission to use the /attack command. To gain access and unleash the power of attacks,\n\n"
-                    "👉 Contact an Admin or the Owner @MrinMoYxCB for approval.\n"
+                    "👉 Contact an Admin or the Owner @Vaibhav_dhami for approval.\n"
                     "🌟 Become a proud supporter and purchase approval.\n"
-                    "💬 Chat with an Owner @MrinMoYxCB now and level up your capabilities!\n\n"
+                    "💬 Chat with an Owner @Vaibhav_dhami now and level up your capabilities!\n\n"
                     "🚀 Ready to supercharge your experience? Take action and get ready for powerful attacks!")
     
     bot.reply_to(message, response)
@@ -338,9 +338,9 @@ def welcome_start(message):
     response = (
         f"🥀Welcome {user_name}!\n\n"
         " For User ID : /id \n\n"
-        "👉 Join our official channel - @wonderboy_cd ✅\n\n"
-        "👑 For access: @MrinMoYxCB\n\n"
-        "👑 OWNER : @earuingamgogoi"
+        "👉 Join our official channel - @BgmiDdosAttack ✅\n\n"
+        "👑 For access: @Vaibhav_dhami"
+        "👑 OWNER : @Vaibhav_dhami"
     )
     bot.reply_to(message, response)
 
@@ -362,9 +362,9 @@ def show_access_expiry(message):
             "🚫 Unauthorized Access! 🚫\n\n"
             "Oops! It seems like you don't have permission to use the /plan command.\n"
             "To gain access and unleash the power of attacks,\n\n"
-            "👉 Contact an Admin or the Owner @MrinMoYxCB for approval.\n"
+            "👉 Contact an Admin or the Owner @Vaibhav_dhami for approval.\n"
             "🌟 Become a proud supporter and purchase approval.\n"
-            "💬 Chat with an Owner @MrinMoYxCB now and level up your capabilities!\n\n"
+            "💬 Chat with an Owner @Vaibhav_dhami now and level up your capabilities!\n\n"
             "🚀 Ready to supercharge your experience? Take action and get ready for powerful attacks!"
         )
     
@@ -392,7 +392,7 @@ def show_command_logs(message):
 
 @bot.message_handler(commands=['owner'])
 def show_owner(message):
-    response = "👑 Bot Owner: @wonderboy_cd"  # Replace with the actual owner username
+    response = "👑 Bot Owner: @Vaibhav_dhami"  # Replace with the actual owner username
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['admincmd'])
@@ -427,7 +427,7 @@ def clear_logs_handler(message):
         response = clear_logs()
         bot.reply_to(message, response)
     else:
-        bot.reply_to(message, "Only @MrinMoYxCB can run this command.")
+        bot.reply_to(message, "Only @Vaibhav_dhami can run this command.")
 
 @bot.message_handler(commands=['mylogs'])
 def show_command_logs(message):
@@ -444,7 +444,7 @@ def show_command_logs(message):
         except FileNotFoundError:
             response = "No command logs found."
     else:
-        response = ("🚫 Unauthorized Access! 🚫\n\n Oops! it seems like you don't have permission to use the /mylogs command. To gain access and unleash the power of attacks,\n\n you can:👉 Contact an Admin or the Owner @MrinMoYxCB for approval.\n🌟 Become a proud supporter and purchase approval.\n💬 Chat with an Owner @MrinMoYxCB now and level up your capabilities!\n\n🚀 Ready to supercharge your experience? Take action and get ready for powerful attacks!")
+        response = ("🚫 Unauthorized Access! 🚫\n\n Oops! it seems like you don't have permission to use the /mylogs command. To gain access and unleash the power of attacks,\n\n you can:👉 Contact an Admin or the Owner @Vaibhav_dhami for approval.\n🌟 Become a proud supporter and purchase approval.\n💬 Chat with an Owner @Vaibhav_dhami now and level up your capabilities!\n\n🚀 Ready to supercharge your experience? Take action and get ready for powerful attacks!")
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['broadcast'])
@@ -453,7 +453,7 @@ def broadcast_message(message):
     if user_id in admin_id:
         command = message.text.split(maxsplit=1)
         if len(command) > 1:
-            message_to_broadcast = "❌❌ ATTENTION EVERYONE ❌❌\n MEESSAGE FROM @MrinMoYxCB:\n\n" + command[1]
+            message_to_broadcast = "❌❌ ATTENTION EVERYONE ❌❌\n MEESSAGE FROM @Vaibhav_dhami:\n\n" + command[1]
             with open(USER_FILE, "r") as file:
                 user_ids = file.read().splitlines()
                 for user_id in user_ids:
@@ -465,7 +465,7 @@ def broadcast_message(message):
         else:
             response = "Please provide a message to broadcast."
     else:
-        response = "Only @MrinMoYxCB can run this command."
+        response = "Only @Vaibhav_dhami can run this command."
 
     bot.reply_to(message, response)
 
